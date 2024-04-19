@@ -1,0 +1,41 @@
+<?php
+$page = isset($_GET['page']) ? $_GET['page'] : 'home';
+
+switch ($page) {
+    case 'home':
+        $welcomeMessage = 'Welcome to our Home Page!';
+        break;
+    case 'about':
+        $welcomeMessage = 'Welcome to our About Page!';
+        break;
+    default:
+        $welcomeMessage = 'Welcome!';
+        break;
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="?page=home">Home</a></li>
+                <li><a href="?page=about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1><?php echo $welcomeMessage; ?></h1>
+        <!-- Other content specific to each page can go here -->
+    </main>
+    
+    <footer>
+        <p>&copy; <?php echo date("Y"); ?> Your Website Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
