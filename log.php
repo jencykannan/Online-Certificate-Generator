@@ -8,7 +8,7 @@
 </head>
 <body><center>
 <div>
-    <form method="POST">
+    <form method="GET">
     <input type="email" name="em" placeholder="enter your email" required>
        <input type="password" name="pa" placeholder="enter your password" required>
        <button name="log" >LOGIN NOW</button>
